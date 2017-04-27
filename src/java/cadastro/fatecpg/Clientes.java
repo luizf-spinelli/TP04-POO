@@ -6,6 +6,15 @@ public class Clientes {
     private String email;
     private String telefone;
     private String endereco;
+    
+        public void setClientes(String nome, String rg, String cpf, String email, String telefone, String endereco){
+        this.setNome(nome);
+        this.setRg(rg);
+        this.setCpf(cpf);
+        this.setEmail(email);
+        this.setTelefone(telefone);
+        this.setEndereco(endereco);
+    }
 
     public String getNome() {
         return nome;
