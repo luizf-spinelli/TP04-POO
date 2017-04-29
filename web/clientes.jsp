@@ -15,16 +15,17 @@
             <fieldset>
                 <legend>Novo cliente</legend>
                 <form class="form-group">
-                    <table>
+                <table>
                 <tr>
                     <td>Nome: <input class="form-control" type="text" name="nome"/></td>
                     <td>RG: <input class="form-control" type="text" name="rg"/></td>
                     <td>CPF: <input class="form-control" type="text" name="cpf"/></td>
-                </tr>
+                </tr><tr>
                     <td>Email: <input class="form-control" type="text" name="email"/></td>
                     <td>Tel.: <input class="form-control" type="text" name="telefone"/></td>
-                    <td>End.: <input class="form-control" type="text" name="endereco"/></td>
-                    <td><input class="form-control" type="submit" name="incluir" value="Incluir"/></td>
+                    <td>End.: <input class="form-control" type="text" name="endereco"/></td><br/></tr>
+                      <tr>
+                          <td class="botão"><input class="form-control btn-primary" type="submit" name="Incluir" value="Incluir"/></td></tr>
                     </table>
                 </form>
             </fieldset>
@@ -78,7 +79,7 @@
                     <td>
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
-                            <input class="form-control" type="submit" name="excluir" value="Excluir"/>
+                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/>
                         </form>
                     </td>
                 </tr>
