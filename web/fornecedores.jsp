@@ -9,11 +9,11 @@
     </head>
     <body>
  <%@include file="WEB-INF/menu.jspf"%>        
-        <h2>Cadastro de clientes</h2>
+        <h2>Cadastro de Fornecedores</h2>
         <div class="borda">
         <div class="principal">
             <fieldset>
-                <legend>Novo cliente</legend>
+                <legend>Novo Fornecedor</legend>
                 <form>
                     <table>
                 <tr>

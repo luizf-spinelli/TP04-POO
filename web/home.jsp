@@ -6,14 +6,12 @@
         <title>Cadastro FatecPG - Grupo 06</title>
     </head>
     <body>
-        <div>
+        <%@include file="WEB-INF/menu.jspf"%>   
+        <div class="borda">
+            <div class="principal">
             <h1>Cadastro FatecPG - Grupo 06</h1>
+            </div>
         </div>
-        <br/>
-        <div>
-            <a href="clientes.jsp"><h3>Cadastro de clientes</h3></a>
-            <br/>
-            <a href="#"><h3>Cadastro de fornecedores</h3></a>
-        </div>
+        <%@include file="WEB-INF/rodape.jspf"%>   
     </body>
 </html>

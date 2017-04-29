@@ -1,0 +1,8 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+<div id="rodape" style="text-align: center">
+	<hr>
+    <h3>Projeto 04 - POO - ADS - Noturno</h3>
+</div>

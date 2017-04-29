@@ -1,0 +1,30 @@
+.principal{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: ridge;
+    
+}
+.borda{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
+
+#menu{
+    
+    font-weight: bold;
+    font-size: x-large;
+    font-family: inherit;
+    
+}
+#menu a{
+    color: #000000;
+}
+
+
+
+
