@@ -5,17 +5,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastro de clientes</title>
+        <title>Cadastro de Clientes</title>
     </head>
     <body>
  <%@include file="WEB-INF/menu.jspf"%>        
-        <h2>Cadastro de clientes</h2>
+        <h2>Cadastro de Clientes</h2>
         <div class="borda">
         <div class="principal">
             <fieldset>
-                <legend>Novo cliente</legend>
+                <legend>Novo Cliente</legend>
                 <form class="form-group">
-                <table>
+                      <table>
                 <tr>
                     <td>Nome: <input class="form-control" type="text" name="nome"/></td>
                     <td>RG: <input class="form-control" type="text" name="rg"/></td>
@@ -25,7 +25,7 @@
                     <td>Tel.: <input class="form-control" type="text" name="telefone"/></td>
                     <td>End.: <input class="form-control" type="text" name="endereco"/></td><br/></tr>
                       <tr>
-                          <td class="botão"><input class="form-control btn-primary" type="submit" name="Incluir" value="Incluir"/></td></tr>
+                          <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
                     </table>
                 </form>
             </fieldset>
@@ -55,7 +55,7 @@
             <br/>
         
         
-            <table  class="table table-bordered" >
+            <table class="table table-bordered">
                 <tr>
                     <th>Índice</th>
                     <th>Nome</th>

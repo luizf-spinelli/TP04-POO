@@ -18,7 +18,7 @@
             
             <h2>Integrantes:</h2>
             <b>André Tripode Colognesi</b><br/>
-            <b>Peterson sei la oq</b>
+            
             
             </div>
         </div>
