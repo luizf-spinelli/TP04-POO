@@ -14,17 +14,17 @@
         <div class="principal">
             <fieldset>
                 <legend>Novo cliente</legend>
-                <form>
+                <form class="form-group">
                     <table>
                 <tr>
-                    <td>Nome: <input type="text" name="nome"/></td>
-                    <td>RG: <input type="text" name="rg"/></td>
-                    <td>CPF: <input type="text" name="cpf"/></td>
+                    <td>Nome: <input class="form-control" type="text" name="nome"/></td>
+                    <td>RG: <input class="form-control" type="text" name="rg"/></td>
+                    <td>CPF: <input class="form-control" type="text" name="cpf"/></td>
                 </tr>
-                    <td>Email: <input type="text" name="email"/></td>
-                    <td>Tel.: <input type="text" name="telefone"/></td>
-                    <td>End.: <input type="text" name="endereco"/></td>
-                    <td><input type="submit" name="incluir" value="Incluir"/></td>
+                    <td>Email: <input class="form-control" type="text" name="email"/></td>
+                    <td>Tel.: <input class="form-control" type="text" name="telefone"/></td>
+                    <td>End.: <input class="form-control" type="text" name="endereco"/></td>
+                    <td><input class="form-control" type="submit" name="incluir" value="Incluir"/></td>
                     </table>
                 </form>
             </fieldset>
@@ -54,7 +54,7 @@
             <br/>
         
         
-            <table border="1">
+            <table  class="table table-bordered" >
                 <tr>
                     <th>Índice</th>
                     <th>Nome</th>
@@ -78,7 +78,7 @@
                     <td>
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
-                            <input type="submit" name="excluir" value="Excluir"/>
+                            <input class="form-control" type="submit" name="excluir" value="Excluir"/>
                         </form>
                     </td>
                 </tr>

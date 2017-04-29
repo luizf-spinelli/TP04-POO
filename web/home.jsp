@@ -7,9 +7,19 @@
     </head>
     <body>
         <%@include file="WEB-INF/menu.jspf"%>   
+        <h2>Cadastro FatecPG - Grupo 06</h2>
+        
         <div class="borda">
             <div class="principal">
-            <h1>Cadastro FatecPG - Grupo 06</h1>
+                <h1>Cadastro FatecPG - Grupo 06</h1>
+                <hr>
+                
+            
+            
+            <h2>Integrantes:</h2>
+            <b>André Tripode Colognesi</b><br/>
+            <b>Peterson sei la oq</b>
+            
             </div>
         </div>
         <%@include file="WEB-INF/rodape.jspf"%>   
