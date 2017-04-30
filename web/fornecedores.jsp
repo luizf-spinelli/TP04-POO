@@ -79,7 +79,8 @@
                     <td>
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
-                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/>
+                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br />
+                            <input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/>
                         </form>
                     </td>
                 </tr>
