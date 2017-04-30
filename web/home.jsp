@@ -19,6 +19,7 @@
             <h2>Integrantes:</h2>
             <b>André Tripode Colognesi</b><br/>
             
+            <b>Jonatas Feijó Lopes</b><br/>
             
             </div>
         </div>

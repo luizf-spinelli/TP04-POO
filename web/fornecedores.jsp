@@ -55,7 +55,7 @@
             <br/>
         
         
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive">
                 <tr>
                     <th>Índice</th>
                     <th>Nome</th>
