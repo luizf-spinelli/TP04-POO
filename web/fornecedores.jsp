@@ -1,5 +1,7 @@
-<%@page import="cadastro.fatecpg.Clientes"%>
-<%@page import="cadastro.fatecpg.ClientesDB"%>
+
+<%@page import="cadastro.fatecpg.Fornecedores"%>
+<%@page import="cadastro.fatecpg.FornecedoresDB"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,8 +20,9 @@
                       <table>
                 <tr>
                     <td>Nome: <input class="form-control" type="text" name="nome"/></td>
-                    <td>RG: <input class="form-control" type="text" name="rg"/></td>
-                    <td>CPF: <input class="form-control" type="text" name="cpf"/></td>
+                    <td>Nome da empresa: <input class="form-control" type="text" name="empresa"/></td>
+                    
+                    <td>CNPJ: <input class="form-control" type="text" name="CNPJ"/></td>
                 </tr><tr>
                     <td>Email: <input class="form-control" type="text" name="email"/></td>
                     <td>Tel.: <input class="form-control" type="text" name="telefone"/></td>
@@ -33,19 +36,19 @@
                 try{
                     if(request.getParameter("incluir")!=null){
                         String nome=request.getParameter("nome");
-                        String rg=request.getParameter("rg");
-                        String cpf=request.getParameter("cpf");
+                        String CNPJ=request.getParameter("CNPJ");
+                        String empresa=request.getParameter("empresa");
                         String email=request.getParameter("email");
                         String telefone=request.getParameter("telefone");
                         String endereco=request.getParameter("endereco");
-                        Clientes c = new Clientes();
-                        c.setClientes(nome, rg, cpf, email, telefone, endereco);
-                        ClientesDB.getClientes().add(c);
+                        Fornecedores c = new Fornecedores();
+                        c.setFornecedores(nome, CNPJ, empresa, email, telefone, endereco);
+                        FornecedoresDB.getFornecedores().add(c);
                         response.sendRedirect(request.getRequestURI());
                     }else if(request.getParameter("excluir")!=null){
                         String id=request.getParameter("id");
                         int i = Integer.parseInt(id);
-                        ClientesDB.getClientes().remove(i);
+                        FornecedoresDB.getFornecedores().remove(i);
                         response.sendRedirect(request.getRequestURI());
                     }
                 }catch(Exception ex){%>
@@ -59,20 +62,21 @@
                 <tr>
                     <th>Índice</th>
                     <th>Nome</th>
-                    <th>RG</th>
-                    <th>CPF</th>
+                   
+                    <th>CNPJ</th>
+                    <th>Nome da empresa</th>
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Endereço</th>
                     <th>Comandos</th>
                 </tr>
-                <%for(int i=0; i<ClientesDB.getClientes().size(); i++){%>
-                <%Clientes c = ClientesDB.getClientes().get(i);%>
+                <%for(int i=0; i<FornecedoresDB.getFornecedores().size(); i++){%>
+                <%Fornecedores c = FornecedoresDB.getFornecedores().get(i);%>
                 <tr>
                     <td><%= i %></td>
                     <td><%= c.getNome() %></td>
-                    <td><%= c.getRg() %></td>
-                    <td><%= c.getCpf() %></td>
+                    <td><%= c.getCNPJ() %></td>
+                    <td><%= c.getEmpresa() %></td>
                     <td><%= c.getEmail() %></td>
                     <td><%= c.getTelefone() %></td>
                     <td><%= c.getEndereco() %></td>
