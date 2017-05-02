@@ -1,4 +1,4 @@
-
+<script language="JavaScript" src="arquivo.js"></script>
 <%@page import="cadastro.fatecpg.Fornecedores"%>
 <%@page import="cadastro.fatecpg.FornecedoresDB"%>
 

@@ -18,9 +18,9 @@
             
             <h2>Integrantes:</h2>
             <b>André Tripode Colognesi</b><br/>
-            
+            <b>Peterson Petravicius</b><br/>
             <b>Jonatas Feijó Lopes</b><br/>
-            
+            <b>Rafael Araujo</b><br/>
             </div>
         </div>
         <%@include file="WEB-INF/rodape.jspf"%>   
