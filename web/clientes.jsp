@@ -9,8 +9,8 @@
     </head>
     <body>
  <%@include file="WEB-INF/menu.jspf"%>   
- <%@include file="Mascaras.js"%>
- <script language="JavaScript" src="Mascaras.js"></script>
+  <script language="JavaScript" src="Mascaras.js"></script>
+
         <h2>Cadastro de Clientes</h2>
         <div class="borda">
         <div class="principal">
@@ -22,12 +22,12 @@
                 <form class="form-group" name ="form1">
                       <table>
                 <tr>
-                    <td>Nome: <input class="form-control" type="text" name="nome"/></td>
-                    <td>RG: <input class="form-control" type="text" name="rg" /></td>
-                    <td>CPF: <input class="form-control" type="text" name="cpf"/></td>
+                    <td>Nome: <input class="form-control" type="text" name="nome" onkeypress="Letras();"/></td>
+                    <td>RG: <input class="form-control" type="text" name="rg" id="rg" size="12" maxlength="12" onkeypress="maskRG(form1.rg); Numeros();" /></td>
+                    <td>CPF: <input class="form-control" type="text" name="cpf" id="cpf" size="14" maxlength="14" onkeypress="maskCPF(form1.cpf); Numeros();"  /></td>
                 </tr><tr>
                     <td>Email: <input class="form-control" type="text" name="email"/></td>
-                    <td>Tel.: <input class="form-control" id="tel" maxLength="15" size="15" type="text" name="tel" onkeypress="MascaraTelefone(form1.tel); Numeros(); "   /></td>
+                    <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form1.telefone); Numeros(); "   /></td>
                     <td>End.: <input class="form-control" type="text" name="endereco"/></td><br/></tr>
                       <tr>
                           <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
