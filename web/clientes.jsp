@@ -30,8 +30,11 @@
                     <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form1.telefone); Numeros(); "   /></td>
                     <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120"/></td><br/></tr>
                       <tr>
-                          <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
-                    </table>
+                          <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td><br></tr>
+                      <tr>    
+                          <td class="botão"><input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/></td>
+                          <td>Indice: <input class="form-control" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/></td></tr>
+                      </table>
                 </form>
             </fieldset>
             <%
@@ -55,10 +58,13 @@
                     }
                 }catch(Exception ex){%>
                 <div style="color: red;">Erro: <%=ex.getMessage()%></div>
-              <%}%>
+              <%}
+            %>
             <br/>
-        
-        
+            
+            
+     
+    
             <table class="table table-bordered table-responsive">
                 <tr>
                     <th>Índice</th>
@@ -84,7 +90,9 @@
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
                             <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br />
-                            <input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/>
+                            
+       
+            <br/>
                         </form>
                     </td>
                 </tr>
@@ -93,5 +101,29 @@
         </div>
         </div>
             <%@include file="WEB-INF/rodape.jspf"%>   
+            
+             <%
+                try{
+                    if(request.getParameter("alterar")!=null){
+                        
+                        String indice = request.getParameter("indice");
+                        int i = Integer.parseInt(indice);
+  
+                        String nome = request.getParameter("nome");
+                        String rg=request.getParameter("rg");
+                        String cpf=request.getParameter("cpf");
+                        String email=request.getParameter("email");
+                        String telefone=request.getParameter("telefone");
+                        String endereco=request.getParameter("endereco");
+                        
+                        Clientes c = new Clientes();
+                        c.setClientes(nome, rg, cpf, email, telefone, endereco);
+                         ClientesDB.getClientes().set(i, c);
+                        response.sendRedirect(request.getRequestURI());
+                    }
+                }catch(Exception ex){%>
+                <div style="color: red;">Erro: <%=ex.getMessage()%></div>
+              <%}%>
+        
     </body>
 </html>

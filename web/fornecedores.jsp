@@ -30,7 +30,10 @@
                     <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120" /></td><br/></tr>
                       <tr>
                           <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
-                    </table>
+                    <tr>    
+                          <td class="botão"><input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/></td>
+                          <td>Indice: <input class="form-control" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/></td></tr>
+                      </table>
                 </form>
             </fieldset>
             <%
@@ -85,7 +88,7 @@
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
                             <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br />
-                            <input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/>
+                            
                         </form>
                     </td>
                 </tr>
@@ -93,6 +96,28 @@
             </table>
         </div>
         </div>
-            <%@include file="WEB-INF/rodape.jspf"%>   
+            <%@include file="WEB-INF/rodape.jspf"%>  
+            <%
+                try{
+                    if(request.getParameter("alterar")!=null){
+                        
+                        String indice = request.getParameter("indice");
+                        int i = Integer.parseInt(indice);
+                        
+                        String nome=request.getParameter("nome");
+                        String CNPJ=request.getParameter("CNPJ");
+                        String empresa=request.getParameter("empresa");
+                        String email=request.getParameter("email");
+                        String telefone=request.getParameter("telefone");
+                        String endereco=request.getParameter("endereco");
+                        Fornecedores c = new Fornecedores();
+                        c.setFornecedores(nome, CNPJ, empresa, email, telefone, endereco);
+                        FornecedoresDB.getFornecedores().set(i, c);
+                        response.sendRedirect(request.getRequestURI());
+                    }
+                }catch(Exception ex){%>
+                <div style="color: red;">Erro: <%=ex.getMessage()%></div>
+              <%}
+            %>
     </body>
 </html>
