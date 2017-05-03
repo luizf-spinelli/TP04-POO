@@ -1,16 +1,17 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/estilo.css" rel="stylesheet">
 <%@ page pageEncoding="UTF-8" %>
 
-<nav class="navbar navbar-default  navbar-fixed-top">
+<nav class="navbar nav-style navbar-fixed-top">
         <div class="container-fluid">
            
-            <div class="collapse navbar-collapse container" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse container">
          
-                <ul id="menu" class="nav navbar-nav navbar-default">
-                  <li><a  href="home.jsp">Home</a></li>
-                  <li><a  href="clientes.jsp">Clientes</a></li>
-                  <li><a  href="fornecedores.jsp">Fornecedores</a></li>
+                <ul id="menu" class="nav navbar-nav col-md-12">
+                  <li class="col-md-4"><a  href="home.jsp">Home</a></li>
+                  <li class="col-md-4"><a  href="clientes.jsp">Clientes</a></li>
+                  <li class="col-md-4"><a  href="fornecedores.jsp">Fornecedores</a></li>
                 </ul>
 
             </div><!-- /.navbar-collapse -->

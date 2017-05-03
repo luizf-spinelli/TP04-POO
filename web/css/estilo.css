@@ -8,45 +8,50 @@
     border-width: 1px;
     
 }
-.borda{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-   
-}
 
 #menu{
-    
-    font-weight: bold;
-    font-size: x-large;
-    font-family: inherit;
-    
+    font-size: 18px;
+    text-align: center;
 }
+
 #menu a{
-    color: #000000;
+    color: #FFF;
+}
+
+#menu a:hover{
+    color:   #2196f3;
+    background-color: #FFF;
+}
+
+.nav-style, #rodape{
+    background-color:   #2196f3;
+}
+
+.img{
+    width: 200px; 
+    height: 200px;
+}
+
+.desc{
+    color: #9e9e9e;
 }
 
 .botão{
     padding-top: 50px;
-    
 }
 
 #rodape{
-    background-color: #c9e2b3;
-    border-width: 1px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    padding-bottom: 5px;
-    
-    
+    height: 100px;
+    text-align: center;
+}
+
+#rodape span{
+    font-size: 20px;
+    color: #FFF;
 }
 
 #tabela tr{
-    font-weight: bold;
-   font-style: italic;
-   font-size: large;
-    
+   
 }
 
 #form tr td{

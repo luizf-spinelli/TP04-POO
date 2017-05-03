@@ -2,8 +2,8 @@
 <%@ page pageEncoding="UTF-8" %>
 <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilo.css" rel="stylesheet">
-<div id="rodape" style="text-align: center">
+<div id="rodape" class="container-fluid">
 	
-    <h4>Projeto 04 - POO - ADS - Noturno</h4>
+    <span>Projeto 04 - POO - ADS - Noturno</span>
     
 </div>
