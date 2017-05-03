@@ -21,18 +21,17 @@
                       <table>
                 <tr>
                     <td>Nome: <input class="form-control" type="text" name="nome" maxlength="60" onkeypress="Letras();"/></td>
-                    <td>Nome da empresa: <input class="form-control" type="text" maxlength="40" name="empresa"/></td>
-                    
-                    <td>CNPJ: <input class="form-control" type="text" name="CNPJ" id="cnpj" size="18" maxlength="18" onkeypress="MascaraCNPJ(form2.cnpj); Numeros();" /></td>
+                    <td>Nome da empresa: <input class="form-control" type="text" maxlength="40" name="empresa"/></td>                    
+                    <td>CNPJ: <input class="form-control" type="text" name="CNPJ" id="cnpj" size="18" maxlength="18" onkeypress="MascaraCNPJ(form2.cnpj); Numeros();" /></td><td></td>
                 </tr><tr>
                     <td>Email: <input class="form-control" type="text" name="email" maxlength="45" /></td>
                     <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form2.telefone); Numeros(); "/></td>
-                    <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120" /></td><br/></tr>
-                      <tr>
-                          <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
-                    <tr>    
+                    <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120" /></td>
+                    <td>Indice: <input class="form-control" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/></td>
+                </tr><tr>
+                          <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td><td></td><td></td>
                           <td class="botão"><input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/></td>
-                          <td>Indice: <input class="form-control" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/></td></tr>
+                </tr>
                       </table>
                 </form>
             </fieldset>
@@ -54,14 +53,27 @@
                         int i = Integer.parseInt(id);
                         FornecedoresDB.getFornecedores().remove(i);
                         response.sendRedirect(request.getRequestURI());
-                    }
+                    }else if(request.getParameter("alterar")!=null){
+                        
+                        String indice = request.getParameter("indice");
+                        int i = Integer.parseInt(indice);
+                        
+                        String nome=request.getParameter("nome");
+                        String CNPJ=request.getParameter("CNPJ");
+                        String empresa=request.getParameter("empresa");
+                        String email=request.getParameter("email");
+                        String telefone=request.getParameter("telefone");
+                        String endereco=request.getParameter("endereco");
+                        Fornecedores c = new Fornecedores();
+                        c.setFornecedores(nome, CNPJ, empresa, email, telefone, endereco);
+                        FornecedoresDB.getFornecedores().set(i, c);
+                        response.sendRedirect(request.getRequestURI());
+                    }                    
                 }catch(Exception ex){%>
                 <div style="color: red;">Erro: <%=ex.getMessage()%></div>
               <%}
             %>
-            <br/>
-        
-        
+            <br/>        
             <table class="table table-bordered table-responsive">
                 <tr>
                     <th>Índice</th>
@@ -96,28 +108,6 @@
             </table>
         </div>
         </div>
-            <%@include file="WEB-INF/rodape.jspf"%>  
-            <%
-                try{
-                    if(request.getParameter("alterar")!=null){
-                        
-                        String indice = request.getParameter("indice");
-                        int i = Integer.parseInt(indice);
-                        
-                        String nome=request.getParameter("nome");
-                        String CNPJ=request.getParameter("CNPJ");
-                        String empresa=request.getParameter("empresa");
-                        String email=request.getParameter("email");
-                        String telefone=request.getParameter("telefone");
-                        String endereco=request.getParameter("endereco");
-                        Fornecedores c = new Fornecedores();
-                        c.setFornecedores(nome, CNPJ, empresa, email, telefone, endereco);
-                        FornecedoresDB.getFornecedores().set(i, c);
-                        response.sendRedirect(request.getRequestURI());
-                    }
-                }catch(Exception ex){%>
-                <div style="color: red;">Erro: <%=ex.getMessage()%></div>
-              <%}
-            %>
+            <%@include file="WEB-INF/rodape.jspf"%>
     </body>
 </html>
