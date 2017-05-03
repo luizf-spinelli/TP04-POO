@@ -1,4 +1,3 @@
-<script language="JavaScript" src="arquivo.js"></script>
 <%@page import="cadastro.fatecpg.Fornecedores"%>
 <%@page import="cadastro.fatecpg.FornecedoresDB"%>
 
@@ -10,7 +9,8 @@
         <title>Cadastro de fornecedores</title>
     </head>
     <body>
- <%@include file="WEB-INF/menu.jspf"%>        
+ <%@include file="WEB-INF/menu.jspf"%>
+ <script language="JavaScript" src="arquivo.js"></script>
         <h2>Cadastro de Fornecedores</h2>
         <div class="borda">
         <div class="principal">
