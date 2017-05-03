@@ -16,23 +16,26 @@
         <div class="borda">
         <div class="principal">
             <fieldset>
-                <legend>Novo Fornecedor</legend>
-                <form class="form-group" name="form2">
-                      <table>
-                <tr>
-                    <td>Nome: <input class="form-control" type="text" name="nome" maxlength="60" onkeypress="Letras();"/></td>
-                    <td>Nome da empresa: <input class="form-control" type="text" maxlength="40" name="empresa"/></td>                    
-                    <td>CNPJ: <input class="form-control" type="text" name="CNPJ" id="cnpj" size="18" maxlength="18" onkeypress="MascaraCNPJ(form2.cnpj); Numeros();" /></td><td></td>
-                </tr><tr>
-                    <td>Email: <input class="form-control" type="text" name="email" maxlength="45" /></td>
-                    <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form2.telefone); Numeros(); "/></td>
-                    <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120" /></td>
-                    <td>Indice: <input class="form-control" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/></td>
-                </tr><tr>
-                          <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td><td></td><td></td>
-                          <td class="botão"><input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/></td>
-                </tr>
-                      </table>
+                <legend>Adicione ou aletere um fornecedor</legend>
+                <form id="form-fornecedor" class="form-group" name="form2">
+                <div class="container">
+                    <div class="row">
+                        <input class="form-control txt-2" placeholder="Índice: " type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/>
+                        <span class="desc">Preencha somente se for alterar</span><br/><br/>
+                        
+                        <input class="form-control txt-3 col-md-4" placeholder="Nome:" type="text" name="nome" maxlength="60" onkeypress="Letras();"/>
+                        <input class="form-control txt-3 col-md-4" placeholder="Empresa:" type="text" maxlength="40" name="empresa"/>
+                        <input class="form-control txt-2 col-md-4"placeholder="CNPJ:" type="text" name="CNPJ" id="cnpj" maxlength="18" onkeypress="MascaraCNPJ(form2.cnpj); Numeros();" />
+                    </div>
+                    <div class="row">
+                        <input class="form-control txt-3 col-md-4" placeholder="E-mail:" type="text" name="email" maxlength="45" />
+                        <input class="form-control txt-2 col-md-4" placeholder="Tel.:" id="telefone" maxLength="15" type="text" name="telefone" onkeypress="MascaraTelefone(form2.telefone); Numeros(); "/>
+                        <input class="form-control txt-4 col-md-4" placeholder="Endereço:" type="text" name="endereco" maxlength="120" />
+                    </div>
+
+                    <input class="btn btn-primary col-md-2 col-md-offset-3" type="submit" name="incluir" value="Incluir"/>
+                    <input class="btn btn-primary col-md-2 col-md-offset-1" type="submit" name="alterar" value="Alterar"/>
+                </div>
                 </form>
             </fieldset>
             <%
