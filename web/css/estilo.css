@@ -50,6 +50,25 @@
     color: #FFF;
 }
 
+#cliente-form span{
+    margin-left: 20px;
+}
+
+.txt-2{
+    margin: 20px;
+    width: 20%;
+}
+
+.txt-3{
+    margin: 20px;
+    width: 30%;
+}
+
+.txt-4{
+    margin: 20px;
+    width: 77%;
+}
+
 #tabela tr{
    
 }

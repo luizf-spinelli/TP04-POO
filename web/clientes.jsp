@@ -15,23 +15,28 @@
         <div class="borda">
         <div class="principal">
             <fieldset>                              
-                <legend>Novo Cliente</legend>
-                <form class="form-group" name ="form1">
-                      <table>
-                <tr>
-                    <td>Nome: <input class="form-control" type="text" name="nome" id ="nome" maxlength="60" onkeypress="Letras(form1.nome);"/></td>
-                    <td>RG: <input class="form-control" type="text" name="rg" id="rg" size="15" maxlength="12" onkeypress="MascaraRG(form1.rg);" /></td>
-                    <td>CPF: <input class="form-control" type="text" name="cpf" id="cpf" size="14" maxlength="14" onkeypress="MascaraCPF(form1.cpf); Numeros();"  /></td><td></td>
-                </tr><tr>
-                    <td>Email: <input class="form-control" type="text" maxlength="45" name="email"/></td>
-                    <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form1.telefone); Numeros(); "   /></td>
-                    <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120"/></td><td></td>
-                    <td>Indice: <input class="form-control" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/></td>
-                </tr><tr>
-                    <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td><td></td><td></td><td></td>
-                    <td class="botão"><input class="form-control btn-primary" type="submit" name="alterar" value="Alterar"/></td>
-                </tr>
-                      </table>
+                <legend>Adicione ou altere um cliente</legend>
+                <form id="cliente-form" class="form-group" name ="form1">
+                    <div class="container">
+                        <div class="row">
+                        <input class="form-control txt-2" placeholder="Índice" type="text" name="indice" id="indice" maxlength="2" onkeypress="Numeros();"/>
+                        <span class="desc">Preencha somente se for alterar</span><br/><br/>
+                        
+                        
+                            <input class="form-control txt-3 col-md-4" placeholder="Nome:" type="text" name="nome" id ="nome" maxlength="60" onkeypress="Letras(form1.nome);"/>
+                            <input class="form-control txt-2 col-md-4" placeholder="RG:" type="text" name="rg" id="rg" maxlength="12" onkeypress="MascaraRG(form1.rg);" />
+                            <input class="form-control txt-2 col-md-4" placeholder="CPF:" type="text" name="cpf" id="cpf" maxlength="14" onkeypress="MascaraCPF(form1.cpf); Numeros();"  />
+                        </div>
+                        <div class="row">
+                            <input class="form-control txt-3 col-md-4" placeholder="E-mail:" type="text" maxlength="45" name="email"/>
+                            <input class="form-control txt-2 col-md-4" placeholder="Tel.:" id="telefone" maxLength="15" type="text" name="telefone" onkeypress="MascaraTelefone(form1.telefone); Numeros(); "   /></td>
+                            <input class="form-control txt-4 col-md-4" placeholder="End.:" type="text" name="endereco" maxlength="120"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input class="btn btn-primary col-md-2 col-md-offset-3" type="submit" name="incluir" value="Incluir"/>
+                        <input class=" btn btn-primary col-md-2 col-md-offset-1" type="submit" name="alterar" value="Alterar"/>
+                    </div>
                 </form>
             </fieldset>
             <%
@@ -74,7 +79,8 @@
               <%}
             %>
             <br/>    
-            <table class="table table-bordered table-responsive">
+            <div class="table-responsive">
+            <table class="table table-bordered">
                 <tr>
                     <th>Índice</th>
                     <th>Nome</th>
@@ -104,6 +110,7 @@
                 </tr>
                 <%}%>
             </table>
+            </div>
         </div>
         </div>
             <%@include file="WEB-INF/rodape.jspf"%>        
