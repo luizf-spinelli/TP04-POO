@@ -99,7 +99,7 @@
                     <td>
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
-                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br />
+                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br/>
                             
                         </form>
                     </td>

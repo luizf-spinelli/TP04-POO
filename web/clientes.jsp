@@ -20,7 +20,7 @@
                       <table>
                 <tr>
                     <td>Nome: <input class="form-control" type="text" name="nome" id ="nome" maxlength="60" onkeypress="Letras(form1.nome);"/></td>
-                    <td>RG: <input class="form-control" type="text" name="rg" id="rg" size="12" maxlength="12" onkeypress="MascaraRG(form1.rg);" /></td>
+                    <td>RG: <input class="form-control" type="text" name="rg" id="rg" size="15" maxlength="12" onkeypress="MascaraRG(form1.rg);" /></td>
                     <td>CPF: <input class="form-control" type="text" name="cpf" id="cpf" size="14" maxlength="14" onkeypress="MascaraCPF(form1.cpf); Numeros();"  /></td><td></td>
                 </tr><tr>
                     <td>Email: <input class="form-control" type="text" maxlength="45" name="email"/></td>
@@ -98,8 +98,7 @@
                     <td>
                         <form>
                             <input type="hidden" name="id" value="<%=i%>"/>
-                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br/>      
-            <br/>
+                            <input class="form-control btn-danger" type="submit" name="excluir" value="Excluir"/><br/>
                         </form>
                     </td>
                 </tr>

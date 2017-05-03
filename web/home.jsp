@@ -20,7 +20,7 @@
             <h4>Luiz Fernando Spinelli</h4>
             <h5>Responsável pela página de cadastro de clientes.</h5><br/>
             <h4>Peterson Petravicius</h4>
-            <h5>Responsável pelas máscaras e tratamentos na entrada de dados.</h5><br/>
+            <h5>Responsável pelas máscaras, função alterar e tratamentos na entrada de dados.</h5><br/>
             <h4>Rafael Araujo</h4>
             <h5>Responsável pela página de cadastro de fornecedores.</h5><br/>
             </div>
