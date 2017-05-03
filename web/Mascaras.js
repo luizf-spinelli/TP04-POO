@@ -13,21 +13,19 @@ switch (obj.value.length) {
 		break;	
 }
 }
-function Numeros(e){		
+function Numeros(e){
                  var tecla;		
                       tecla = (window.event)?event.keyCode:e.which;   		
                          if((tecla>47 && tecla<58 )) {	
                            
                              return true;		
-                         }		
-                         else if ( tecla==44 || tecla==46 ){ 		
+                         }else if  ( tecla===44 || tecla===46 ){
+                           
                              return true;		
                          }		
-                         else{		
-                 alert(" Insira apenas caracteres numericos");
-               
-             return false;		
-             }		
+                         else{	                  
+                 alert("DIGITE APENAS NUMEROS");           
+             }              
          }
     
 function Letras(){
@@ -41,27 +39,42 @@ function Letras(){
 	}
 }
 
- function maskRG(RG) {
+ function MascaraRG(RG) {
  	var evt = window.event;
  	kcode=evt.keyCode;
- 	if (kcode == 8) return;
- 	if (RG.value.length == 2) { 
+ 	if (kcode === 8) return;
+ 	if (RG.value.length === 2) { 
                 RG.value = RG.value + '.'; 
-            }else if (RG.value.length == 6) {
+            }else if (RG.value.length === 6) {
                     RG.value = RG.value + '.'; 
-                } else if (RG.value.length == 10) { RG.value = RG.value + '-'; 
+                } else if (RG.value.length === 10) { RG.value = RG.value + '-'; 
                 }
  }
  
- function maskCPF(CPF) {
+ function MascaraCPF(CPF) {
  	var evt = window.event;
  	kcode=evt.keyCode;
- 	if (kcode == 8) return;
- 	if (CPF.value.length == 3) {
+ 	if (kcode === 8) return;
+ 	if (CPF.value.length === 3) {
                 CPF.value = CPF.value + '.'; 
-            } else if (CPF.value.length == 7) {
+            } else if (CPF.value.length === 7) {
                      CPF.value = CPF.value + '.'; 
-                 } else if (CPF.value.length == 11) {
+                 } else if (CPF.value.length === 11) {
                             CPF.value = CPF.value + '-';
  }
+ }
+ 
+ function MascaraCNPJ(CNPJ) {
+ 	var evt = window.event;
+ 	kcode=evt.keyCode;
+ 	if (kcode === 8) return;
+ 	if (CNPJ.value.length === 2) {
+                CNPJ.value = CNPJ.value + '.'; 
+                } else if (CNPJ.value.length === 6) {
+                     CNPJ.value = CNPJ.value + '.'; 
+                         } else if (CNPJ.value.length === 10) {
+                             CNPJ.value = CNPJ.value + '/'; 
+                              } else if (CNPJ.value.length === 15) {
+                                   CNPJ.value = CNPJ.value + '-';
+                    }
  }

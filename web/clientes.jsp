@@ -22,13 +22,13 @@
                 <form class="form-group" name ="form1">
                       <table>
                 <tr>
-                    <td>Nome: <input class="form-control" type="text" name="nome" onkeypress="Letras();"/></td>
-                    <td>RG: <input class="form-control" type="text" name="rg" id="rg" size="12" maxlength="12" onkeypress="maskRG(form1.rg); Numeros();" /></td>
-                    <td>CPF: <input class="form-control" type="text" name="cpf" id="cpf" size="14" maxlength="14" onkeypress="maskCPF(form1.cpf); Numeros();"  /></td>
+                    <td>Nome: <input class="form-control" type="text" name="nome" id ="nome" maxlength="60" onkeypress="Letras(form1.nome);"/></td>
+                    <td>RG: <input class="form-control" type="text" name="rg" id="rg" size="12" maxlength="12" onkeypress="MascaraRG(form1.rg);" /></td>
+                    <td>CPF: <input class="form-control" type="text" name="cpf" id="cpf" size="14" maxlength="14" onkeypress="MascaraCPF(form1.cpf); Numeros();"  /></td>
                 </tr><tr>
-                    <td>Email: <input class="form-control" type="text" name="email"/></td>
+                    <td>Email: <input class="form-control" type="text" maxlength="45" name="email"/></td>
                     <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form1.telefone); Numeros(); "   /></td>
-                    <td>End.: <input class="form-control" type="text" name="endereco"/></td><br/></tr>
+                    <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120"/></td><br/></tr>
                       <tr>
                           <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
                     </table>
@@ -55,8 +55,7 @@
                     }
                 }catch(Exception ex){%>
                 <div style="color: red;">Erro: <%=ex.getMessage()%></div>
-              <%}
-            %>
+              <%}%>
             <br/>
         
         

@@ -11,22 +11,23 @@
     <body>
  <%@include file="WEB-INF/menu.jspf"%>
  <script language="JavaScript" src="arquivo.js"></script>
+ <script language="JavaScript" src="Mascaras.js"></script>
         <h2>Cadastro de Fornecedores</h2>
         <div class="borda">
         <div class="principal">
             <fieldset>
                 <legend>Novo Fornecedor</legend>
-                <form class="form-group">
+                <form class="form-group" name="form2">
                       <table>
                 <tr>
-                    <td>Nome: <input class="form-control" type="text" name="nome"/></td>
-                    <td>Nome da empresa: <input class="form-control" type="text" name="empresa"/></td>
+                    <td>Nome: <input class="form-control" type="text" name="nome" maxlength="60" onkeypress="Letras();"/></td>
+                    <td>Nome da empresa: <input class="form-control" type="text" maxlength="40" name="empresa"/></td>
                     
-                    <td>CNPJ: <input class="form-control" type="text" name="CNPJ"/></td>
+                    <td>CNPJ: <input class="form-control" type="text" name="CNPJ" id="cnpj" size="18" maxlength="18" onkeypress="MascaraCNPJ(form2.cnpj); Numeros();" /></td>
                 </tr><tr>
-                    <td>Email: <input class="form-control" type="text" name="email"/></td>
-                    <td>Tel.: <input class="form-control" type="text" name="telefone"/></td>
-                    <td>End.: <input class="form-control" type="text" name="endereco"/></td><br/></tr>
+                    <td>Email: <input class="form-control" type="text" name="email" maxlength="45" /></td>
+                    <td>Tel.: <input class="form-control" id="telefone" maxLength="15" size="15" type="text" name="telefone" onkeypress="MascaraTelefone(form2.telefone); Numeros(); "/></td>
+                    <td>End.: <input class="form-control" type="text" name="endereco" maxlength="120" /></td><br/></tr>
                       <tr>
                           <td class="botão"><input class="form-control btn-primary" type="submit" name="incluir" value="Incluir"/></td></tr>
                     </table>
